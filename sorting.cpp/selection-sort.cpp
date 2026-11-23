@@ -2,6 +2,8 @@
 using namespace std;
 
 int main() {
+
+    //Input
     int n;
     cout<<"Enter size of array: ";
     cin>>n;
@@ -9,6 +11,7 @@ int main() {
     for(int i = 0; i<n; i++)
     cin>>arr[i];
 
+    //selection sort - repeatedly sort elements in array.
     for(int i = 0; i<n-1; i++)
     {
         int index = i;
@@ -22,6 +25,7 @@ int main() {
         swap(arr[i], arr[index]);
     }
 
+    //Output.
     cout<<"Sorted Array: ";
     for(int i = 0; i<n; i++)
     cout<<arr[i]<<" ";
