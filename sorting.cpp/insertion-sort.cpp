@@ -3,6 +3,7 @@ using namespace std;
 
 int main ()
 {
+    //Input.
     int n;
     cout<<"Enter size of array: ";
     cin>>n;
@@ -11,6 +12,7 @@ int main ()
     for(int i = 0; i<n; i++)
     cin>>arr[i];
 
+    //Insertion-sort --> Ascending order.
     for(int i = 1; i<n; i++)
     {
         for(int j = i; j>0; j--)
@@ -22,6 +24,7 @@ int main ()
         }
     }
 
+    //Output.
     cout<<"Sorted Array: ";
     for(int i = 0; i<n; i++)
     cout<<arr[i]<<" ";
