@@ -1,6 +1,31 @@
 #include<iostream>
 using namespace std;
 
+//binary search function call.
+int binarysearch(int n, int x, int *arr);
+
+int main ()
+{
+    //INPUT.
+    int n;
+    cout<<"Enter size of array: ";
+    cin>>n;
+    int arr[n];
+    cout<<"Enter elements of array: ";
+    for(int i = 0; i<n; i++)
+    cin>>arr[i];
+
+    int x;
+    cout<<"Enter the element: ";
+    cin>>x;
+
+    //OUTPUT
+    cout<<"Element found at index: "<<binarysearch(n, x, arr);
+
+    return 0;
+}
+
+//binary search function definition.
 int binarysearch(int n, int x, int *arr)
 {
     int mid, start = 0, end = n-1;
@@ -16,23 +41,4 @@ int binarysearch(int n, int x, int *arr)
             start = mid+1;
     }
     return -1;
-}
-
-int main ()
-{
-    int n;
-    cout<<"Enter size of array: ";
-    cin>>n;
-    int arr[n];
-    cout<<"Enter elements of array: ";
-    for(int i = 0; i<n; i++)
-    cin>>arr[i];
-
-    int x;
-    cout<<"Enter the element: ";
-    cin>>x;
-
-    cout<<"Element found at index: "<<binarysearch(n, x, arr);
-
-    return 0;
 }
